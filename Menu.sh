@@ -31,7 +31,7 @@ createRepo()
 {
 	read -p "What name would you like to call this repository: " vName
 	mkdir "$vName"
-	echo "A repository '$vName' was created		" $(date) >> LogFile.txt
+	echo "A repository '$vName' was created		" $(date) "	" $(whoami) >> LogFile.txt
 	echo >> LogFile.txt
 }
 
@@ -45,7 +45,7 @@ addFile()
 		cd $rep
 		echo > "$vFile".txt
 		cd ..
-		echo "A file '$vFile' has been created and saved into '$rep'		" $(date) >> LogFile.txt
+		echo "A file '$vFile' has been created and saved into '$rep'		" $(date) "	" $(whoami) >> LogFile.txt
 		echo >> LogFile.txt
 		
 	else
