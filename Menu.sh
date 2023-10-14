@@ -4,9 +4,12 @@ menu()
 	running= true;
 	while $running; do
 	
+		echo $'This is your current directory\n'$(ls)
+		echo 
 		echo "Press 1 if you would you like create a new repository"
 		echo "Press 2 if you would like to add a file to a repository"
-		echo "Press 3 if you would like to view the log file" 
+		echo "Press 3 if you would like to view the log file"
+		echo "Press 4 if you would like to edit a file" 
 		read -p $'Press 0 if you would like to EXIT the program\n' value
 		
 		if [ $value -eq 1 ]; then
@@ -17,11 +20,13 @@ menu()
 			
 		elif [ $value -eq 3 ]; then
 			viewLog
+		
+		elif [ $value -eq 4 ]; then
+			editFile
 			
 		elif [ $value -eq 0 ]; then
 			running= false
-			break
-			
+			break	
 		fi
 		
 	done
@@ -64,6 +69,33 @@ viewLog()
 {
 	cat LogFile.txt
 }
+
+editFile()
+{
+	ls
+	read -p "Is the file you would like to add in this repository y/n: " anss
+	if [ $ans "y" ]; then
+		find -type f
+		read -p "What is the name of the file: " file
+		nano $file
+		cd ..
+		echo "A file '$vFile' has been edited and saved in '$rep'		" $(date) "	" $(whoami) >> LogFile.txt
+		echo >> LogFile.txt
+	elif [ $ans = "n" ]; then
+		echo */
+		read -p "What is the name of the directory: " dir
+		cd dir
+		find -type f
+		read -p "What is the name of the file: " file
+		nano $file
+		cd ..
+		echo "A file '$vFile' has been edited and saved in '$rep'		" $(date) "	" $(whoami) >> LogFile.txt
+		echo >> LogFile.txt
+	else
+		echo "That was not one of the answeres"
+	fi		
+}
+
 
 
 
