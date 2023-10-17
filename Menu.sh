@@ -6,23 +6,35 @@ menu()
 	
 		echo $'This is your current directory\n'$(ls)
 		echo 
-		echo "Press 1 if you would you like create a new repository"
-		echo "Press 2 if you would like to add a file to a repository"
-		echo "Press 3 if you would like to view the log file"
-		echo "Press 4 if you would like to edit a file" 
+		echo "Press 1 to change repository"
+		echo "Press 2 to create a new repository"
+		echo "Press 3 to add a file to a repository"
+		echo "Press 4 to view the log file"
+		echo "Press 5 to edit a file" 
+		echo "Press 6 to zip a repository" 
+		echo "Press 7 to go back a repository" 
 		read -p $'Press 0 if you would like to EXIT the program\n' value
 		
-		if [ $value -eq 1 ]; then
-			createRepo
+		if [ $value -eq 2 ]; then
+			changeRepo
 			
 		elif [ $value -eq 2 ]; then
-			addFile
+			createRepo
 			
 		elif [ $value -eq 3 ]; then
+			addFile
+			
+		elif [ $value -eq 4 ]; then
 			viewLog
 		
-		elif [ $value -eq 4 ]; then
+		elif [ $value -eq 5 ]; then
 			editFile
+		
+		elif [ $value -eq 6 ]; then
+			zipFile
+		
+		elif [ $value -eq 6 ]; then
+			cd ..
 			
 		elif [ $value -eq 0 ]; then
 			running= false
@@ -96,7 +108,22 @@ editFile()
 	fi		
 }
 
+zipFile()
+{
+	echo */ 
+	read -p "Which repository would you like to zip: " zDir
+	read -p "What would you like to call your zip folder: " zFolder
+	zip -r zFolder zDir
+	echo "A folder '$vDir' has been ziped into '$zFolder'		" $(date) "	" $(whoami) >> LogFile.txt
+		echo >> LogFile.txt
+}
 
+changeRepo()
+{
+	ls
+	read -p "Which repository woud you like to see: " nRepo
+	cd nRepo
+}
 
 
 
