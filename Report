@@ -1,0 +1,30 @@
+AC21009 Assignment - Shell Scripting with Bash
+
+Group Number - 13
+
+Names of group members:
+                        Elia Cossais Benezech
+                        Fahad Almotairi
+                        Alexander Gordon
+
+
+During this assigment there was various stages of success and failure that we tackled as a group. The first challenge was writing the log for who's logged in. Trying to figure out how to find the name of the user who is using the program to eneter into the log. 
+We wanted to see if we could find this out by using built in resources in unix to find this command but resulted in using the internet/lecture materials instead. The answer was $whoami. Another challenge as a group is the timing for all of our members to come to gether and 
+make progress in programming this assignment. This was further made difficult with a Maths exam and another assignment being due in the same week. We managed to get this done by doing an hour or more a day with each other a couple times a week.
+
+With the planning we managed to make our way through all of the 'Basic Functionality' and 'Standard Functionality'. we didnt manage to complete 2 of the bullet points of the 'Further Extensions' due to time constraints. The two bullet points we didnt manage to complete 
+were: 
+    -Providing secure access to sets of files using UNIX user and group IDs. Note that this mayrequire creating multiple test accounts for thorough testing.
+    -Implementing a rollback feature, allowing users to return to earlier file versions, either byundoing edits or by restoring previous file versions.
+
+These reqirments proved difficult with the time we had left 
+
+
+
+
+
+
+
+
+
+
