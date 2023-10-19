@@ -9,21 +9,34 @@ Names of group members:
 
 
 During this assigment there was various stages of success and failure that we tackled as a group. The first challenge was writing the log for who's logged in. Trying to figure out how to find the name of the user who is using the program to eneter into the log. 
-We wanted to see if we could find this out by using built in resources in unix to find this command but resulted in using the internet/lecture materials instead. The answer was $whoami. Another challenge as a group is the timing for all of our members to come to gether and 
-make progress in programming this assignment. This was further made difficult with a Maths exam and another assignment being due in the same week. We managed to get this done by doing an hour or more a day with each other a couple times a week.
+We wanted to see if we could find this out by using built in resources in unix to find this command but resulted in using the internet/lecture materials instead. The answer was $whoami. Another challenge as a group is the timing for all of our members to come to 
+gether and make progress in programming this assignment. This was further made difficult with a Maths exam and another assignment being due in the same week. We managed to get this done by doing an hour or more a day with each other a couple times a week.
 
-With the planning we managed to make our way through all of the 'Basic Functionality' and 'Standard Functionality'. we didnt manage to complete 2 of the bullet points of the 'Further Extensions' due to time constraints. The two bullet points we didnt manage to complete 
+The biggest issue we encounterd was syntax, when completeing the 'Check files in and out of the created repository' bullet point we used sources out side of lectures to find out how to lock and unlock files. This on its own was a challenge as none of it was working. We 
+tired many diffrent ways to find file pathing descovring new commands as we searched. Nothing worked untill we saw that putting a space in between the equals signs messed with the variable and ran the line like an instruction. After we found this to be the issue we 
+managed to implement this bullet point. Although this basic mistake set us back an hour it imporved our problem solving and finding new ways to do one task, which is the silver lining.
+
+With our meetings we managed to make our way through all of the 'Basic Functionality' and 'Standard Functionality'. we didnt manage to complete 2 of the bullet points of the 'Further Extensions' due to time constraints. The two bullet points we didnt manage to complete 
 were: 
     -Providing secure access to sets of files using UNIX user and group IDs. Note that this mayrequire creating multiple test accounts for thorough testing.
     -Implementing a rollback feature, allowing users to return to earlier file versions, either byundoing edits or by restoring previous file versions.
 
-These reqirments proved difficult with the time we had left 
+
+We each completed bullet points on our own and then added them to the program in meetings which was a very good way of completing the project as we could make the code more efficient or find out if we had done the bullet points correctly. 
+
+Evalutating us as a group I would say we worked well together, if we had started the project earlier we wouldnt have had to spend so much time in the meetings to get the work completed. With the impending maths test and the other assignment due starting sooner would've
+made it less stress full and we would have been able to research and complete the other two 'Further Extensions' bullet points. We are pleased with how our assignment turned out but annoyed that we couldnt get the 'Further Extensions' completed.
 
 
 
 
 
 
+
+
+sources for code:
+              https://linuxconfig.org/bash-script-set-variable-example
+              https://stackoverflow.com/questions/59768931/bash-script-to-compile-and-run-c-program
 
 
 
