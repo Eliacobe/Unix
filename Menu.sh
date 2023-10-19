@@ -3,7 +3,8 @@ menu()
 {
 	running= true;
 	while $running; do
-	
+		echo 
+		echo 
 		echo $'This is your current directory\n'$(ls)
 		echo 
 		echo "Press 1 to change repository"
@@ -15,7 +16,7 @@ menu()
 		echo "Press 7 to go back a repository" 
 		read -p $'Press 0 if you would like to EXIT the program\n' value
 		
-		if [ $value -eq 2 ]; then
+		if [ $value -eq 1 ]; then
 			changeRepo
 			
 		elif [ $value -eq 2 ]; then
@@ -33,7 +34,7 @@ menu()
 		elif [ $value -eq 6 ]; then
 			zipFile
 		
-		elif [ $value -eq 6 ]; then
+		elif [ $value -eq 7 ]; then
 			cd ..
 			
 		elif [ $value -eq 0 ]; then
@@ -48,8 +49,8 @@ createRepo()
 {
 	read -p "What name would you like to call this repository: " vName
 	mkdir "$vName"
-	echo "A repository '$vName' was created		" $(date) "	" $(whoami) >> LogFile.txt
-	echo >> LogFile.txt
+	echo "A repository '$vName' was created		" $(date) "	" $(whoami) >> /home/vboxuser/Efiles/Project1/LogFile.txt
+	echo >> /home/vboxuser/Efiles/Project1/LogFile.txt
 }
 
 addFile()
@@ -62,8 +63,8 @@ addFile()
 		cd $rep
 		echo > "$vFile".txt
 		cd ..
-		echo "A file '$vFile' has been created and saved into '$rep'		" $(date) "	" $(whoami) >> LogFile.txt
-		echo >> LogFile.txt
+		echo "A file '$vFile' has been created and saved into '$rep'		" $(date) "	" $(whoami) >> /home/vboxuser/Efiles/Project1/LogFile.txt
+		echo >> /home/vboxuser/Efiles/Project1/LogFile.txt
 		
 	else
 		read -p "This repository does not exist would you like to create one y/n: " ans
@@ -91,8 +92,8 @@ editFile()
 		read -p "What is the name of the file: " file
 		nano $file
 		cd ..
-		echo "A file '$vFile' has been edited and saved in '$rep'		" $(date) "	" $(whoami) >> LogFile.txt
-		echo >> LogFile.txt
+		echo "A file '$vFile' has been edited and saved in '$rep'		" $(date) "	" $(whoami) >> /home/vboxuser/Efiles/Project1/LogFile.txt
+		echo >> /home/vboxuser/Efiles/Project1/LogFile.txt
 	elif [ $ans = "n" ]; then
 		echo */
 		read -p "What is the name of the directory: " dir
@@ -101,8 +102,8 @@ editFile()
 		read -p "What is the name of the file: " file
 		nano $file
 		cd ..
-		echo "A file '$vFile' has been edited and saved in '$rep'		" $(date) "	" $(whoami) >> LogFile.txt
-		echo >> LogFile.txt
+		echo "A file '$vFile' has been edited and saved in '$rep'		" $(date) "	" $(whoami) >> /home/vboxuser/Efiles/Project1/LogFile.txt
+		echo >> /home/vboxuser/Efiles/Project1/LogFile.txt
 	else
 		echo "That was not one of the answeres"
 	fi		
@@ -114,18 +115,17 @@ zipFile()
 	read -p "Which repository would you like to zip: " zDir
 	read -p "What would you like to call your zip folder: " zFolder
 	zip -r zFolder zDir
-	echo "A folder '$vDir' has been ziped into '$zFolder'		" $(date) "	" $(whoami) >> LogFile.txt
-		echo >> LogFile.txt
+	echo "A folder '$vDir' has been ziped into '$zFolder'		" $(date) "	" $(whoami) >> /home/vboxuser/Efiles/Project1/LogFile.txt
+		echo >> /home/vboxuser/Efiles/Project1/LogFile.txt
 }
 
 changeRepo()
 {
-	ls
+	echo */
 	read -p "Which repository woud you like to see: " nRepo
-	cd nRepo
+	cd $nRepo
 }
 
 
 
 menu
-
